@@ -109,12 +109,16 @@ const PowerUp = styled.button`
   transition: all 0.2s ease-in;
   background-color: #e6e8fa;
   font-size: 1.25rem;
-  &:hover {
+  &:active {
     background: linear-gradient(#bf953f, #fcf6ba);
     transform: scale(1.1);
   }
-  &:active {
-    transform: scale(0.9);
+  @media (min-width: 798px) {
+    &:focus,
+    &:hover {
+      background: linear-gradient(#bf953f, #fcf6ba);
+      transform: scale(1.1);
+    }
   }
 `;
 
